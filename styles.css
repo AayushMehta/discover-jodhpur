@@ -1,0 +1,512 @@
+/* ELEMENT-SPECIFIC STYLING */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 10vw;
+  font-weight: 900;
+  text-align: center;
+}
+
+h2 {
+  font-size: 92px;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+h2:hover {
+  transform: scale(1.1);
+  color: #af0000;
+}
+
+h3 {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #af0000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+small {
+  font-size: 13px;
+}
+
+label,
+button {
+  font-family: "Barlow Semi Condensed";
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 16px;
+  font-family: "Inter", sans-serif;
+  color: rgb(104, 104, 104);
+}
+
+footer {
+  border: 1px solid black;
+  font-weight: bold;
+  margin: 100px auto 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 1px rgb(0, 0, 0);
+}
+
+footer i {
+  color: #af0000;
+}
+
+footer small {
+  font-weight: 400;
+  color: rgb(67, 67, 67);
+}
+
+/* HERO WORD ANIMATION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 58%,
+      rgb(0, 0, 0) 42%
+    ),
+    url(nyc/assets/freedom-tower.jpeg);
+}
+
+.word-cycle {
+  color: white;
+  position: sticky;
+  top: 20%;
+  mix-blend-mode: difference;
+  padding-bottom: 25px;
+  -ms-animation: movement 6s ease;
+  -moz-animation: movement 6s ease;
+  -o-animation: movement 6s ease;
+  -webkit-animation: movement 6s ease;
+  animation: movement 6s ease;
+}
+
+@keyframes movement {
+  from {
+    transform: translateY(-55vh);
+  }
+}
+
+.word-cycle:after {
+  content: "";
+  -ms-animation: word-cycle 8s ease infinite alternate;
+  -moz-animation: word-cycle 8s ease infinite alternate;
+  -o-animation: word-cycle 8s ease infinite alternate;
+  -webkit-animation: word-cycle 8s ease infinite alternate;
+  animation: word-cycle 8s ease infinite alternate;
+}
+
+@keyframes word-cycle {
+  0% {
+    content: " Ecclectic";
+    color: #d200b2;
+  }
+  12.5% {
+    content: " Vibrant";
+    color: #af0000;
+  }
+  25% {
+    content: " Evolving";
+    color: #b14102;
+  }
+  37.5% {
+    content: " Colorful";
+    color: #a1941e;
+  }
+  50% {
+    content: " Diverse";
+    color: #4f8906;
+  }
+  62.5% {
+    content: " Busy";
+    color: #048f6e;
+  }
+  75% {
+    content: " Lively";
+    color: #0643b8;
+  }
+  87.5% {
+    content: " Inspiring";
+    color: #150674;
+  }
+  100% {
+    content: " Exciting";
+    color: #6d0088;
+  }
+}
+
+/* HEADING STYLING */
+
+.discover-heading,
+.experience-heading,
+.taste-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 30px;
+  text-align: center;
+  max-width: 430px;
+  margin-bottom: 20px;
+}
+
+/* DISCOVER SECTION */
+
+.discover {
+  background: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.discover-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.gallery-img img {
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  filter: grayscale(0.9);
+}
+
+.gallery-img img:hover {
+  transform: scale(0.9);
+  filter: grayscale(0);
+}
+
+/* EXPERIENCE SECTION */
+
+.experience {
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.experience-heading {
+  margin-right: 50px;
+}
+
+.experience-listings {
+  margin: 5px 30px 40px;
+}
+
+.listing {
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  background: rgb(223, 223, 223);
+  color: black;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.listing img {
+  margin-right: 10px;
+  object-fit: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.484);
+}
+
+.listing:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+/* TASTE SECTION */
+
+.taste {
+  background: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.taste-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(270px, 300px));
+  row-gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.taste-img img {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  -webkit-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.taste-img img:hover {
+  transform: scale(1.1);
+  filter: brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.77);
+}
+
+/* VISIT SECTION */
+
+.visit {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.visit p {
+  width: 400px;
+  margin: 15px auto 20px auto;
+}
+
+/* FORM-SPECIFIC STYLING */
+
+.full-form-wrapper {
+  margin: 100px auto 0px;
+  padding: 10px 20px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 1px rgb(0, 0, 0);
+  border: 1px solid black;
+}
+
+.tour-form {
+  margin-top: 15px;
+}
+
+.full-form-wrapper small {
+  color: rgb(110, 110, 110);
+}
+
+#mobile-date {
+  width: 100px;
+  display: none;
+}
+
+#guests {
+  width: 60px;
+}
+
+#visit-btn {
+  padding: 12px 46px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+  background: black;
+  border: 2px solid black;
+  -webkit-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+#visit-btn:hover {
+  background: transparent;
+  color: black;
+  transform: scale(1.1);
+  border: 2px solid #af0000;
+}
+
+#visit-btn:active {
+  background: #af0000;
+}
+
+/* SUBMISSION MESSAGES */
+#submission-incomplete {
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #cc0000;
+}
+
+#submission-complete {
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #3d6709;
+  max-width: 330px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+  .experience-heading {
+    margin-right: 0;
+  }
+
+  .gallery-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .taste-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .taste-img:last-of-type {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  h2 {
+    font-size: 74px;
+  }
+
+  .gallery-img img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  label {
+    display: block;
+  }
+
+  .discover-gallery {
+    grid-template-columns: auto;
+  }
+
+  .gallery-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .listing {
+    padding: 10px;
+  }
+
+  .listing img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .taste-gallery img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .visit p {
+    width: 280px;
+  }
+
+  .tour-form br {
+    display: none;
+  }
+
+  #date {
+    display: none;
+  }
+
+  #mobile-date {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h2 {
+    font-size: 56px;
+  }
+
+  .taste-gallery img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .taste-gallery {
+    grid-template-columns: auto;
+  }
+
+  .full-form-wrapper {
+    width: 80%;
+    padding: 10px 10px 20px;
+  }
+
+  .visit p {
+    font-size: 17px;
+  }
+}
