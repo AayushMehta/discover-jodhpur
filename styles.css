@@ -238,11 +238,12 @@ footer small {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* padding-left: 1.5rem; */
+  padding-left: 1.5rem;
 }
 
 .experience-heading {
-  margin-right: 50px;
+  margin-right: 30px;
+  /* margin-left: 20px; */
 }
 
 .experience-listings {
